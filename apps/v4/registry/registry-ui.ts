@@ -2,6 +2,11 @@ import type { Registry } from "shadcn-vue/schema"
 
 export const ui: Registry["items"] = [
   {
+    name: "__tests__",
+    type: "registry:ui",
+    files: [],
+  },
+  {
     name: "accordion",
     type: "registry:ui",
     dependencies: [
@@ -2201,19 +2206,8 @@ export const ui: Registry["items"] = [
     ],
   },
   {
-    name: "button-daisyui-demo",
-    type: "registry:example",
-    dependencies: [
-      "reka-ui",
-    ],
-    registryDependencies: [
-      "button",
-    ],
-    files: [
-      {
-        path: "examples/ButtonDaisyUIDemo.vue",
-        type: "registry:example",
-      },
-    ],
+    name: "__tests__",
+    type: "registry:ui",
+    files: [],
   },
 ]

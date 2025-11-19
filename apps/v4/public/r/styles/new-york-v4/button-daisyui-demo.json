@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "button-daisyui-demo",
+  "type": "registry:example",
+  "dependencies": [
+    "reka-ui"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york-v4/examples/ButtonDaisyUIDemo.vue",
+      "content": "<script setup lang=\"ts\">\nimport { ref } from \"vue\"\nimport { Button } from \"../ui/button\"\n\nconst selectedVariant = ref(\"primary\")\nconst selectedSubvariant = ref(\"\")\n</script>\n\n<template>\n  <div class=\"space-y-4\">\n    <h3 class=\"text-lg font-semibold\">\n      DaisyUI Button Examples\n    </h3>\n\n    <!-- Color Variants -->\n    <div class=\"space-y-2\">\n      <h4 class=\"font-medium\">\n        Color Variants\n      </h4>\n      <div class=\"flex gap-2 flex-wrap\">\n        <Button variant=\"daisy_primary\">\n          Primary\n        </Button>\n        <Button variant=\"daisy_secondary\">\n          Secondary\n        </Button>\n        <Button variant=\"daisy_success\">\n          Success\n        </Button>\n        <Button variant=\"daisy_warning\">\n          Warning\n        </Button>\n        <Button variant=\"daisy_error\">\n          Error\n        </Button>\n        <Button variant=\"daisy_info\">\n          Info\n        </Button>\n      </div>\n    </div>\n\n    <!-- Subvariants -->\n    <div class=\"space-y-2\">\n      <h4 class=\"font-medium\">\n        Style Subvariants\n      </h4>\n      <div class=\"flex gap-2 flex-wrap\">\n        <Button variant=\"daisy_primary\" subvariant=\"outline\">\n          Primary Outline\n        </Button>\n        <Button variant=\"daisy_success\" subvariant=\"ghost\">\n          Success Ghost\n        </Button>\n        <Button variant=\"daisy_warning\" subvariant=\"soft\">\n          Warning Soft\n        </Button>\n        <Button variant=\"daisy_error\" subvariant=\"dash\">\n          Error Dash\n        </Button>\n      </div>\n    </div>\n\n    <!-- Size Variants -->\n    <div class=\"space-y-2\">\n      <h4 class=\"font-medium\">\n        Size Variants\n      </h4>\n      <div class=\"flex gap-2 items-center\">\n        <Button variant=\"daisy_primary\" size=\"xs\">\n          XS\n        </Button>\n        <Button variant=\"daisy_primary\" size=\"sm\">\n          SM\n        </Button>\n        <Button variant=\"daisy_primary\" size=\"md\">\n          MD\n        </Button>\n        <Button variant=\"daisy_primary\" size=\"lg\">\n          LG\n        </Button>\n        <Button variant=\"daisy_primary\" size=\"xl\">\n          XL\n        </Button>\n      </div>\n    </div>\n\n    <!-- Backward Compatibility -->\n    <div class=\"space-y-2\">\n      <h4 class=\"font-medium\">\n        Backward Compatible\n      </h4>\n      <div class=\"flex gap-2 flex-wrap\">\n        <Button variant=\"default\">\n          Default\n        </Button>\n        <Button variant=\"destructive\">\n          Destructive\n        </Button>\n        <Button variant=\"outline\">\n          Outline\n        </Button>\n        <Button variant=\"ghost\">\n          Ghost\n        </Button>\n        <Button variant=\"link\">\n          Link\n        </Button>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "type": "registry:example"
+    }
+  ]
+}
