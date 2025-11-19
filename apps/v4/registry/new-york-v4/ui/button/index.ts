@@ -8,6 +8,7 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
+        // Existing shadcn variants
         default:
           "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
@@ -19,11 +20,38 @@ export const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+
+        // DaisyUI color variants
+        daisy_primary: "bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500",
+        daisy_secondary: "bg-gray-500 text-white hover:bg-gray-600",
+        daisy_success: "bg-green-500 text-white hover:bg-green-600",
+        daisy_warning: "bg-yellow-500 text-black hover:bg-yellow-600",
+        daisy_error: "bg-red-500 text-white hover:bg-red-600",
+        daisy_info: "bg-cyan-500 text-white hover:bg-cyan-600",
+        daisy_accent: "bg-purple-500 text-white hover:bg-purple-600",
+        daisy_neutral: "bg-gray-300 text-black hover:bg-gray-400",
+
+        // Special standalone variants
+        daisy_ghost: "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800",
+        daisy_link: "bg-transparent underline hover:no-underline",
       },
+
+      subvariant: {
+        outline: "border-2 bg-transparent hover:bg-current hover:text-white",
+        ghost: "bg-transparent hover:bg-current hover:bg-opacity-10",
+        link: "bg-transparent underline hover:no-underline",
+        soft: "bg-opacity-20 hover:bg-opacity-30",
+        dash: "border-2 border-dashed bg-transparent",
+        active: "ring-2 ring-offset-2",
+        disabled: "opacity-50 cursor-not-allowed pointer-events-none",
+      },
+
       size: {
-        "default": "h-9 px-4 py-2 has-[>svg]:px-3",
+        "xs": "h-6 px-2 text-xs",
         "sm": "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+        "md": "h-9 px-4 py-2 has-[>svg]:px-3",
         "lg": "h-10 rounded-md px-6 has-[>svg]:px-4",
+        "xl": "h-12 px-6 text-lg",
         "icon": "size-9",
         "icon-sm": "size-8",
         "icon-lg": "size-10",
@@ -31,7 +59,7 @@ export const buttonVariants = cva(
     },
     defaultVariants: {
       variant: "default",
-      size: "default",
+      size: "md",
     },
   },
 )
