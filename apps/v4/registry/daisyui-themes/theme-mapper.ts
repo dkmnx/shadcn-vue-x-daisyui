@@ -53,5 +53,11 @@ function getLighterVariant(hex: string, opacity: number): string {
   const blendedG = Math.round(g + (255 - g) * opacity)
   const blendedB = Math.round(b + (255 - b) * opacity)
 
-  return `#${blendedR.toString(16).padStart(2, "0")}${blendedG.toString(16).padStart(2, "0")}${blendedB.toString(16).padStart(2, "0")}`
+  // ES5-compatible hex padding
+  function padHex(value: number): string {
+    const hex = value.toString(16)
+    return hex.length === 1 ? `0${hex}` : hex
+  }
+
+  return `#${padHex(blendedR)}${padHex(blendedG)}${padHex(blendedB)}`
 }
