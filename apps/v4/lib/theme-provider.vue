@@ -6,6 +6,11 @@ interface Props {
   defaultTheme?: string
 }
 
+// Export component name for proper import
+defineOptions({
+  name: 'ThemeProvider',
+})
+
 const props = withDefaults(defineProps<Props>(), {
   defaultTheme: 'light',
 })
