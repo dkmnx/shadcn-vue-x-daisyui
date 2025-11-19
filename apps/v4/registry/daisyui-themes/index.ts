@@ -1,8 +1,12 @@
 import type { DaisyUITheme, ThemeMapping } from "./types"
-import { mapDaisyUIToShadcn } from "./theme-mapper"
+import { darkTheme } from "./dark.js"
+import { lightTheme } from "./light.js"
+import { mapDaisyUIToShadcn } from "./theme-mapper.js"
 
-// Temporary empty theme registry - will be populated in Task 2
-export const daisyUIThemes: ThemeMapping = {}
+export const daisyUIThemes: ThemeMapping = {
+  light: lightTheme,
+  dark: darkTheme,
+}
 
 export function getTheme(name: string) {
   return daisyUIThemes[name]
